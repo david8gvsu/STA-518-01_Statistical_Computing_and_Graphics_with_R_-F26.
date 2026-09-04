@@ -1,0 +1,42 @@
+---
+title: "Introduction_to_Quarto"
+author: "David"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+## **Markdown**
+
+Markdown is a lightweight set of conventions for formatting plain text files.
+
+### **Headings**
+
+Headings and subheadings can be included in a file to organize the document.
+
+```{r}
+# 1st Level Heading
+## 2nd Level Heading
+### 3rd Level Header
+
+```
