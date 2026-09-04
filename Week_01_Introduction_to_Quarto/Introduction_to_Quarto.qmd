@@ -1,0 +1,171 @@
+---
+title: "Introduction_to_Quarto"
+author: "David"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: inline
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+## **Markdown**
+
+Markdown is a lightweight set of conventions for formatting plain text files.
+
+### **Headings**
+
+Headings and subheadings can be included in a file to organize the document. make sure to leave a space between the \# and heading.
+
+\# 1st Level Header
+
+\## 2nd Level Header
+
+\### 3rd Level Header
+
+Activity_1:
+
+➡️ Include a first-level header, second-level header, and third-level header in your document naming them Section 1, Subsection 1.1, and Subsubsection 1.1.1, respectively.
+
+Solution:
+
+# Section 1
+
+## Subsection 1.1,
+
+### Subsubsection 1.1.1
+
+## Including R code chunks
+
+R code chunks in R are include by pressing "Option+ Command + i"
+
+`{#This is the R code chunk where R codes is written.}`
+
+### **Links and Images**
+
+Hyperlinks and external images or GIFs can be included in Quarto documents as well.
+
+### Hyperlinks
+
+- \[linked phrase\](<http://example.com>+) "if i remove the + sign, the link name will be shown as below."
+
+- [linked phrase](http://example.com)
+
+  Activity_2:
+
+- ➡️ Include a hyperlink linking to the Google homepage.
+
+Solution:
+
+\[Google Homegage\](<https://www.google.com/?client=safari&channel=mac_bm>+). " if i remove the + sign, the link name will be shown as below."
+
+[Google Homepage](https://www.google.com/?client=safari&channel=mac_bm)
+
+### images
+
+Always right click an image to copy the path which is the "image address"
+
+\![Image caption text\](path/to/img.png)
+
+Activity_3:
+
+! [World cup winner 2026](https://static.time.com/v3/assets/bltea6093859af6183b/blta99a3b5fab853572/6a5d94ca7cb8c6203481b3e7/GettyImages-2286250745.jpg?branch=production&width=1440&quality=75&auto=webp&crop=3:2)
+
+### **Text Formatting**
+
+Basic formatting of text, such as italicizing, bolding, superscripts, and subscripts can be implemented as well.
+
+| Raw text input   | Rendered output |
+|------------------|-----------------|
+| \*italic\*       | *italic*        |
+| \*\*bold\*\*     | **bold**        |
+| \`code\`         | code            |
+| superscript\^2\^ | superscript2    |
+| subscript\~2\~   | subscript2      |
+
+### Activity_4:
+
+➡️ Include an italicized word or phrase.
+
+Solution: *On July 19, 2026 Spain won world cup finals defeating Argentina 1-0*
+
+➡️ Include a bold word or phrase.
+
+Solution: **On July 19, 2026 Spain won world cup finals defeating Argentina 1-0**
+
+➡️ Include a word styled showing it is code.
+
+Solution: On July 19, 2026 `Spain` won world cup finals defeating Argentina 1-0
+
+➡️ Include a superscript and a subscript.
+
+Solution: On July 19^th^, 2026 `Spain` won world cup finals defeating Argentina ~1-0~.
+
+## **Code Chunks**
+
+adding **code chunks** to the file, allows us to run R code inside our document:
+
+There are several ways to insert a code chunk:
+
+1.  The keyboard shortcut Cmd/Ctrl + Alt + I (recommended)
+
+2.  The “Insert” button icon ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAUCAMAAABPqWaPAAADAFBMVEUAAAD0+Pn1+fr0+Prx9vfm6+zj5Ojn4+vl4+nj5+ns8PHt8fLd4OHn6Onk7uXQ69DZ7Nnp7Ovf4eLi5eb3+vz4+/32+fvz9/je4uPp6er///+x5bEdsBxcxlvx+/H7+vva3N3d4+Ln7uzm7erl7erm7evy9vf5+/7p7e7g4uKp4agAogBCvUH2/Pbs7uyJqYl/rYCEsoWEsoSDsoOFsoWdv57Z5t34+v3h4+Xp6umb3Zpgx19HvkYTrBEptChdxVtkyWPa8NmjxKJutWx8w3l6wnl9w3txtG+JtYrl7urc3uHs7e1ax1gAoAALqQkfsB0XrRUBpQAAowDL7cqmxaZUpVJlt2NitWBgtF5htF9ktmJmt2Rsu2prrGrI2sv6+//a3N7n6Oi057OM14pfx10Pqg0wti+A0n+M14vh8+GOuI1Zp1d4v3aWzJSXzZaBwn9puGdouWZgqV/A1cP7/P/c3+DX2dqm36VBvEDy+/La5tpgnl5cq1qVzJTc7tu73bm/373k8uSTy5FltmNhqV/B1cTl6erLzs/i5OW56Lgwty1pzGj1/fXs8Ox6qXlQmk6EwILr9Ouy2rFfs11quGjF4sSg0Z7v8/TY3N3Ex8jW2Njo7Onr8urt8u3b3dx2nHZOlE1eqly02rPt9u56v3hitWFot2Z0vXLz+Pnr7/DW2tvBxcXBw8XIx8zJyM2xtrRXilddqVtntWXE4sPo8+d2vnRnt2Xh5ebU2NnO0dLV19nL0M9poWlktGK43bf5+/iDw4FftF1mtmTy9fjg5+Rvqm5muGOKx4ju9+7V6tWCw4CFxIO327ZouWX6/f/j6uhouGaRypDS6NHL5Mqw2a94vnb5/P5vqm9ktWJvum1iqWDB1sT6/P/3+v3v8/ODsoRcrlppumZpuWdkt2JpuWZsq2zS4df5+//H2cxrpWxgrF5grl5jp2OkxKf1+Pr5+v7Y5NysyK+iwqSjw6WiwqWkw6fE18jw9fX8/f/9/f8AAAAAAAAAAAAAAAAAAAAAAACyI5hNAAAAAXRSTlMAQObYZgAAAc9JREFUeF5jkGLCBV8wrHR/w/KGxZAByEKCLxiZPIMznLm0T4dm/GFAASwSwWtFHgr/3HnxwY7VULEqewbP7QzMNpM/MXBI6Tz8d3r3ly+fZy748iWot3nTHQYJJgYGBSOmD9f1Co3ZHJeKMoiKiGyzWeXOwPCCueonF6MQ1zvOh+827rjovfVjrOHfjJiYeV8YgHruidkyaVaJaQczMBj8UTp1hmFGGwPDQaBM8Ift8/8IWW9nKGFIWCkoeCeBgeHn4hcMEsx/hLdxxd4wuGKo9TvA+474H4brTAwshfOmfGGpuL3MKvXBgRa5J6fvLxWaw1DOMIfhJ9DXDMwLf2cfM/Tglv19mM16gucZhnNMzxhYnIAuYGac+94/4Yrx5UBH4Rtrzn/gZX7GwPDr5UoGBiYJBoa9XEc4DzG0bjBl4f4TwxcGDIVYoCjLSvuD9gwM5w1vMjDcSrnIPf0MSAZkD0s4UOKg/Yt/3xkYLjDIpTCItzIwNDJIvGBgWhkNlDgowdTzC6T2zZxWEPUBrGclA9C0F+fvfGPYysDwwOBUY30jqxhQlvEwUByoiSE8pZiBhaGymeEPC2vodoaD4QxSh5m8mZiYDh+WQgAQnwkAfMWtty+xHGoAAAAASUVORK5CYII=) in the editor toolbar (top right).
+
+3.  By manually typing the chunk delimiters
+
+Activity_5:
+
+➡️ Add a new code chunk at the bottom of the Quarto document, naming the chunk uptown-chunk by including **#\| label: uptown-chunk** as the first line inside the code chunk.
+
+Solution:
+
+```{r}
+#| label: uptown-chunk
+#| warning: true
+scores <- c(3,5,2,8)
+mean(scores)
+```
+
+new activity for testing settings
+
+```{r}
+2+2
+```
+
+Activity_6:
+
+➡️ In the code chunk, use the include_graphics() function from the knitr package to include the image at the following URL: <https://github.com/dilernia/STA418-518/blob/main/uptownFunk2.png?raw=true>. Note that the URL should be enclosed in quotes when calling the include_graphics() function.
+
+solution:
+
+```{r}
+#| label: uptown-chunk
+#| echo: false
+
+knitr::include_graphics("https://github.com/dilernia/STA418-518/blob/main/uptownFunk2.png?raw=true")
+
+```
+
+**Why use `knitr::include_graphics()`?**
+
+- **Consistency:** It handles pathing seamlessly across different output formats (like HTML, PDF, and Word).
+
+- **Quarto Integration:** It allows you to use chunk options like `#| out.width: "80%"` or `#| fig.align: "center"` to control how the image looks in your final document.
