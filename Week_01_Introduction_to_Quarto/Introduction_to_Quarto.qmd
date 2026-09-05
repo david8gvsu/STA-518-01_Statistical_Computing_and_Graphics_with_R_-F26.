@@ -5,6 +5,7 @@ format: html
 editor: visual
 editor_options: 
   chunk_output_type: inline
+
 ---
 
 ## Quarto
@@ -22,6 +23,9 @@ When you click the **Render** button a document will be generated that includes 
 You can add options to executable code like this
 
 ```{r}
+ HEAD
+
+#| echo: false
 2 * 2
 ```
 
@@ -33,6 +37,7 @@ Markdown is a lightweight set of conventions for formatting plain text files.
 
 ### **Headings**
 
+<<<<<<< HEAD
 Headings and subheadings can be included in a file to organize the document. make sure to leave a space between the \# and heading.
 
 \# 1st Level Header
@@ -152,20 +157,30 @@ new activity for testing settings
 
 Activity_6:
 
-➡️ In the code chunk, use the include_graphics() function from the knitr package to include the image at the following URL: <https://github.com/dilernia/STA418-518/blob/main/uptownFunk2.png?raw=true>. Note that the URL should be enclosed in quotes when calling the include_graphics() function.
+➡️ In the code chunk, use the include_graphics() function from the knitr package to include the image at the following URL:<https://github.com/dilernia/STA418-518/blob/main/uptownFunk2.png?raw=true>. Note that the URL should be enclosed in quotes when calling the include_graphics() function.
 
 solution:
 
 ```{r}
 #| label: uptown-chunk
 #| echo: false
-
+### Use of knitr::include_graphics()
 knitr::include_graphics("https://github.com/dilernia/STA418-518/blob/main/uptownFunk2.png?raw=true")
 
 ```
 
-**Why use `knitr::include_graphics()`?**
+**Why use `knitr::include_graphics()`?**
 
-- **Consistency:** It handles pathing seamlessly across different output formats (like HTML, PDF, and Word).
+- **Consistency:**It handles pathing seamlessly across different output formats (like HTML, PDF, and Word).
 
-- **Quarto Integration:** It allows you to use chunk options like `#| out.width: "80%"` or `#| fig.align: "center"` to control how the image looks in your final document.
+- **Quarto Integration:**It allows you to use chunk options like #| out.width: "80%"`or`#| fig.align: "center"`to control how the image looks in your final document.
+=======
+Headings and subheadings can be included in a file to organize the document.
+
+```{r}
+# 1st Level Heading
+## 2nd Level Heading
+### 3rd Level Header
+
+```
+
