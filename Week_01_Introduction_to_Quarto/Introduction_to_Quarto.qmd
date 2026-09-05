@@ -43,7 +43,7 @@ Headings and subheadings can be included in a file to organize the document. mak
 
 Activity_1:
 
-➡️ Include a first-level header, second-level header, and third-level header in your document naming them Section 1, Subsection 1.1, and Subsubsection 1.1.1, respectively.
+Include a first-level header, second-level header, and third-level header in your document naming them Section 1, Subsection 1.1, and Subsubsection 1.1.1, respectively.
 
 Solution:
 
@@ -71,7 +71,7 @@ Hyperlinks and external images or GIFs can be included in Quarto documents as we
 
   Activity_2:
 
-- ➡️ Include a hyperlink linking to the Google homepage.
+  Include a hyperlink linking to the Google homepage.
 
 Solution:
 
