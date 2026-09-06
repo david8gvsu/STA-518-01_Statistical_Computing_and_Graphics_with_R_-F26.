@@ -1,7 +1,7 @@
 
 # STA 518-01: Statistical Computing & Graphics with R
 
-A comprehensive repository for **STA 518: Statistical Computing & Graphics with R** (Fall 2026) at Grand Valley State University. This project serves as a professional-grade codebase and digital portfolio, documenting advanced workflows in statistical computing, automated data pipelines, and scalable data visualizations using R and the RStudio/Posit Workbench ecosystem.
+A comprehensive repository used while studying **STA 518: Statistical Computing & Graphics with R** (Fall 2026) at Grand Valley State University. This project serves as a professional-grade codebase and digital portfolio, documenting advanced workflows in statistical computing, automated data pipelines, and scalable data visualizations using R and the RStudio/Posit Workbench ecosystem.
 
 The primary objective of this repository is to develop, test, and maintain fully reproducible workflows for complex data analysis, algorithmic simulations, and predictive modeling. Each module is structured to demonstrate rigorous engineering standards, clean documentation, and adherence to open-source best practices.
 
