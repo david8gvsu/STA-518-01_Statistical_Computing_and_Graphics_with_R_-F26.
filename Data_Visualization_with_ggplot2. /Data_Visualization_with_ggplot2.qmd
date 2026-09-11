@@ -1,0 +1,154 @@
+---
+title: "Data Visualization with ggplot2"
+author: "David Nganga"
+date: today
+format: html
+html: 
+  self-contained: true
+  embende-resources: true
+  toc: true
+execute:
+  eval: true # Evaluate code
+  echo: true # Show code
+  error: true # Allows code execution with errors ignored
+  warning: false # Suppress warnings
+  message: false # suppress messages
+  editor: visual
+editor_options: 
+  chunk_output_type: inline
+---
+
+### Loading packages
+
+```{r}
+library(palmerpenguins)
+library(tidyverse)
+library(skimr)
+library(knitr)
+```
+
+## **Structure of code**
+
+The structure of the code for ggplot2 objects is of the form:
+
+**Example: Palmer Penguins data**
+
+➡️ First, let’s load the Palmer Penguins data set and explore some high-level characteristics of the data set using the code below:
+
+```{r}
+data(penguins, package = "palmerpenguins")
+
+
+```
+
+we can glimpse our data to start
+
+```{r}
+glimpse(penguins)
+```
+
+making a blank canvas for our visualization.
+
+adding bill depth
+
+```{r}
+penguins |>
+  ggplot(aes(x=bill_depth_mm)   )
+```
+
+adding bill length
+
+```{r}
+penguins |>
+  ggplot(aes(x=bill_depth_mm), y=bill_length_mm  )
+```
+
+adding points to the plot:
+
+```{r}
+penguins |>
+  ggplot(aes(x=bill_depth_mm,y=bill_length_mm))+
+  geom_point()
+```
+
+➡️ Let’s color the points in our scatter plot based on the species of the penguin being Adelie, Chinstrap, or Gentoo, reproducing the plot below.
+
+```{r}
+penguins |>
+  ggplot(aes(x=bill_depth_mm,
+             y=bill_length_mm,
+             color= species))+
+  geom_point()
+```
+
+➡️ Next, add another layer to our ggplot to customize the title and subtitle using the labs() function to reproduce the plot below.
+
+```{r}
+penguins |>
+  ggplot(aes(x=bill_depth_mm,
+             y=bill_length_mm,
+             color= species))+
+  geom_point()+
+  labs(title="Penguin bill length by bill depth",
+       subtitle = "Dimensions for Adelie, chinstrap, and Gentoo Penguins")
+```
+
+➡️ Also customize the axis labels using the x and y options in the labs() function.
+
+```{r}
+penguins |>
+  ggplot(aes(x=bill_depth_mm,
+             y=bill_length_mm,
+             color= species))+
+  geom_point()+
+  labs(title="Penguin bill length by bill depth",
+       subtitle = "Dimensions for Adelie, chinstrap, and Gentoo Penguins",
+       x="bill_depth(mm)",
+       y="bill_length(mm)")
+
+```
+
+Adding caption
+
+```{r}
+penguins |>
+  ggplot(aes(x=bill_depth_mm,
+             y=bill_length_mm,
+             color= species))+
+  geom_point()+
+  labs(title="Penguin bill length by bill depth",
+       subtitle = "Dimensions for Adelie, chinstrap, and Gentoo Penguins",
+       x="bill_depth(mm)",
+       y="bill_length(mm)",
+       caption = "Source:source")
+
+```
+
+➡️ Lastly, use a discrete color scale that is inclusive of viewers with common forms of color blindness by adding a scale_color_viridis_d() layer to the plot, creating the final plot below.
+
+```{r}
+penguins |>
+  ggplot(aes(x=bill_depth_mm,
+             y=bill_length_mm,
+             color= species))+
+  geom_point()+
+  labs(title="Penguin bill length by bill depth",
+       subtitle = "Dimensions for Adelie, chinstrap, and Gentoo Penguins",
+       x="bill_depth(mm)",
+       y="bill_length(mm)",
+       color="species",
+       caption = "Source:Station LTER / polmernguins packag") +
+  scale_color_viridis_d() 
+
+```
+
+**Mapping vs. Setting**
+
+```{r}
+ggplot(penguins,
+       aes(x = bill_depth_mm,
+           y = bill_length_mm,
+           size = body_mass_g)) + 
+  geom_point()
+
+```
