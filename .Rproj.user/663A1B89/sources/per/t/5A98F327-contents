@@ -1,0 +1,34 @@
+---
+title: "Hello Penguins"
+author: "David Nganga"
+format: html
+execute:
+  echo: true
+  editor: visual
+---
+
+## Meet the penguins
+
+**Penguins are flightless birds that have adapted to live seamlessly in the ocean, using their wings as powerful flippers to "fly" underwater**. While most people associate them strictly with ice and snow, several species thrive in warmer climates across the Southern Hemisphere, including the coasts of South Africa and South America as shown in @fig-penguins.
+
+```{r}
+#| label: fig-penguins
+#| fig-cap: "Dimensions of penguins"
+#| warning: false
+library(tidyverse, quietly = TRUE)
+library(palmerpenguins)
+penguins |>
+  ggplot(aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species), size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+  theme_minimal() + 
+  labs(
+    title = "Penguin Bill Length vs. Flipper Length",
+    subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
+    x = "Flipper Length (mm)",
+    y = "Bill Length (mm)",
+    color = "Species",
+    shape = "Species"
+  )
+
+```

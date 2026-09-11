@@ -1,0 +1,8 @@
+"0","#| label: uptown-chunk"
+"0","#| warning: true"
+"0","scores <- c(3,5,2,8)"
+"0","mean(scores)"
+"1","[1]"
+"1"," 4.5"
+"1","
+"

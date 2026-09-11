@@ -1,0 +1,7 @@
+"0","library(tidyverse)"
+"0","# Load storms data set"
+"0","data(storms)"
+"0",""
+"0","storms |> ggplot(aes(x = pressure, y = wind)) +"
+"0","  geom_point()"
+"0",""
