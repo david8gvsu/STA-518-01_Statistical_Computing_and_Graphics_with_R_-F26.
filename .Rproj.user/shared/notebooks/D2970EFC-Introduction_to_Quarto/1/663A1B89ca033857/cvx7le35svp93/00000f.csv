@@ -1,0 +1,5 @@
+"0","# Displaying flextable with tron theme"
+"0","storms_summary |>"
+"0","  flextable() |>"
+"0","  autofit() |>"
+"0","  theme_tron()"

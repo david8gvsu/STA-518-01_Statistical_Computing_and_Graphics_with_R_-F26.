@@ -1,0 +1,7 @@
+"0","#| label: flextable-zebra-theme"
+"0","library(flextable)"
+"0","# Displaying flextable with a clean zebra theme"
+"0","storms_summary |>"
+"0","  flextable() |>"
+"0","  autofit() |>"
+"0","  theme_zebra()"

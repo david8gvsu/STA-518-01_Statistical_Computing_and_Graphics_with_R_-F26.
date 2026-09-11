@@ -1,0 +1,8 @@
+"0","#| label: tbl-storms"
+"0","#| tbl-cap: ""Table made with kable()"""
+"0","library(flextable)"
+"0",""
+"0","storms_summary |>"
+"0","  flextable() |>"
+"0","  colformat_double(big.mark="""", digits=0) |>"
+"0","  autofit()"

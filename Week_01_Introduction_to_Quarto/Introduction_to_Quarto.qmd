@@ -1,11 +1,21 @@
 ---
 title: "Introduction_to_Quarto"
-author: "David"
-format: html
-editor: visual
-editor_options: 
+author: "David Nganga"
+date: today
+format: 
+ html: 
+  self-contained: true
+  embend-resources: true
+  toc: true
+execute:
+  eval: true # Evaluate code
+  echo: true # Show code
+  error: true # Allows code execution with errors ignored
+  warning: false # Suppress warnings
+  message: false # suppress messages
+editor_options:
+  editor: visual
   chunk_output_type: inline
-
 ---
 
 ## Quarto
@@ -23,13 +33,27 @@ When you click the **Render** button a document will be generated that includes 
 You can add options to executable code like this
 
 ```{r}
- HEAD
-
-#| echo: false
+#| echo: true
 2 * 2
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
+
+Question:
+
+➡️ Create one document for two of the most common formats: HTML and Word. Render ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAASCAYAAAD8DUjrAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAASqADAAQAAAABAAAAEgAAAAA2rgFCAAADkUlEQVRYCe1YX0hTYRT/bWrOP/ngvxuMxBJ66X+BWwQzMXroIY1CDYmB0GtDH4b4MHEPEnsQgp6FPQz/gNV6rCRnEU4IiTAwWK1g5dBk4czp3Nb57r2uu+W9181FJB747u75zj2/7zu/e87Zt2ki0WhiMxbHvigzoNVqNMpP7Ft5BnJG1MZmAvHE3mWVEio3GeV8HcTj2SUwwvai5Oeq9L6GNsAGI6r5TAWKDmj3FF85j2Z+YQ1Dr4IIr8f2FFH5atEshaP4QMFvxISSOqkvwbvAaoobm5MK8xnxLqLlXAUqSwukpv/2XjWjhqcX8ex9CJ75H/z4vhpN3kvn0hkIUBm6yDe0Jp9Z3oFClOqkow1jgXSkHOmBEXTo7sGbJZwqUcs/N7OEBkLkO/RyAb7FiCxGs/MLwpF1fvicQGdd9sHILpIDgypRu11jJRLDwzdLWA6rE861dcGGWXz+W1m1i2BUe1T3FX0KPPs228lcihMpuoJs3kkQYx016BwX0WwehHuNpAjzfosHMDXAzptbMOQbRWtyu9Nw6LZsgM1J6ZoictiEPtqGOt91DM2ZaW0BV5Wowaepr/eWoQrD1Kilst2c1F5EJJkvcuDKlBu7d4ACY2TwwQqBuK9Rabo4ghN0x8w6rPUCut00iQlWtqSyftdkHUGDqx0cBJIwRTb+WcHXjn7c5V3VsWF/BPjI3yWslc1rFjx3eKWDGq6eKpclyW2uSTZ0z2XaGJ8xBB54Afc4BdbGSGLCodXSD/vzaUGlq22qBwZRM5idaB73w8/0mUnYbzhhFgnlfR1kF5/dCTZsXZLsBFSJKivK24LP+LOYypRl2wl9saxvsplPEQkmSSMP+OFGH5qk34qmPmDOT7mlLMFPs8DxWqJWRrLAVi29m+cr4f24gqh4jiopzMMxrihlB2wuXRjB7IR+tEqXbtper+/BhI3KZ+CSkFX6WjRTVgzypZTuokwVd+Qs8IQRavxNFk8OhNJTxGZF/qfkxxPKv80OlxeCDamwLFES1pM6jNWoPqjck9IxDL0e2KgBO6gErfWNVCo16B5thCtZfukeMjojYtwMp6Vd7GfUk+5TNlKP4kWfObY2nqOf/Bpxz4zUOw2HMiZJcDfCypcgO3hST3J5cFrSw9jh1DEjLqT0oW+Hiw5lb01bh1lq4RZJj2L9LkNsTWSD/riL7/6PuwcT31BYoMHtC9VZHgWUIv/3tl9BO2trlxv48wAAAABJRU5ErkJggg==) each of the three documents.
+
+- How does the output differ?
+
+  Answer:
+
+  Html : render output as .html file. the output can interact with web. html also enables interactive features like interactive data visualization.
+
+  word : renders .docx file which can only open and edit on desktop. word output are static images
+
+- Looking at the YAML at the top of the document, how does the input differ?
+
+  Answer:The input between the two is different int in format. for html we get "format:html " and for word we get "format: docx".
 
 ## **Markdown**
 
@@ -37,14 +61,13 @@ Markdown is a lightweight set of conventions for formatting plain text files.
 
 ### **Headings**
 
-<<<<<<< HEAD
 Headings and subheadings can be included in a file to organize the document. make sure to leave a space between the \# and heading.
 
-\# 1st Level Header
+#1st Level Header
 
-\## 2nd Level Header
+##2nd Level Header
 
-\### 3rd Level Header
+###3rd Level Header
 
 Activity_1:
 
@@ -62,21 +85,19 @@ Solution:
 
 R code chunks in R are include by pressing "Option+ Command + i"
 
-`{#This is the R code chunk where R codes is written.}`
-
 ### **Links and Images**
 
 Hyperlinks and external images or GIFs can be included in Quarto documents as well.
 
 ### Hyperlinks
 
-- \[linked phrase\](<http://example.com>+) "if i remove the + sign, the link name will be shown as below."
+\[linked phrase\](<http://example.com>+) "if i remove the + sign, the link name will be shown as below."
 
-- [linked phrase](http://example.com)
+[linked phrase](http://example.com)
 
-  Activity_2:
+Activity_2:
 
-  Include a hyperlink linking to the Google homepage.
+Include a hyperlink linking to the Google homepage.
 
 Solution:
 
@@ -86,13 +107,15 @@ Solution:
 
 ### images
 
-Always right click an image to copy the path which is the "image address"
+Always right click an image from a website to copy the path (image address).
 
-\![Image caption text\](path/to/img.png)
+\[Image caption text\](path/to/img.png)
 
 Activity_3:
 
-! [World cup winner 2026](https://static.time.com/v3/assets/bltea6093859af6183b/blta99a3b5fab853572/6a5d94ca7cb8c6203481b3e7/GettyImages-2286250745.jpg?branch=production&width=1440&quality=75&auto=webp&crop=3:2)
+crating link for the image of the "World cup winner 2026"
+
+[World cup winner 2026](https://static.time.com/v3/assets/bltea6093859af6183b/blta99a3b5fab853572/6a5d94ca7cb8c6203481b3e7/GettyImages-2286250745.jpg?branch=production&width=1440&quality=75&auto=webp&crop=3:2)
 
 ### **Text Formatting**
 
@@ -132,7 +155,7 @@ There are several ways to insert a code chunk:
 
 1.  The keyboard shortcut Cmd/Ctrl + Alt + I (recommended)
 
-2.  The “Insert” button icon ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAUCAMAAABPqWaPAAADAFBMVEUAAAD0+Pn1+fr0+Prx9vfm6+zj5Ojn4+vl4+nj5+ns8PHt8fLd4OHn6Onk7uXQ69DZ7Nnp7Ovf4eLi5eb3+vz4+/32+fvz9/je4uPp6er///+x5bEdsBxcxlvx+/H7+vva3N3d4+Ln7uzm7erl7erm7evy9vf5+/7p7e7g4uKp4agAogBCvUH2/Pbs7uyJqYl/rYCEsoWEsoSDsoOFsoWdv57Z5t34+v3h4+Xp6umb3Zpgx19HvkYTrBEptChdxVtkyWPa8NmjxKJutWx8w3l6wnl9w3txtG+JtYrl7urc3uHs7e1ax1gAoAALqQkfsB0XrRUBpQAAowDL7cqmxaZUpVJlt2NitWBgtF5htF9ktmJmt2Rsu2prrGrI2sv6+//a3N7n6Oi057OM14pfx10Pqg0wti+A0n+M14vh8+GOuI1Zp1d4v3aWzJSXzZaBwn9puGdouWZgqV/A1cP7/P/c3+DX2dqm36VBvEDy+/La5tpgnl5cq1qVzJTc7tu73bm/373k8uSTy5FltmNhqV/B1cTl6erLzs/i5OW56Lgwty1pzGj1/fXs8Ox6qXlQmk6EwILr9Ouy2rFfs11quGjF4sSg0Z7v8/TY3N3Ex8jW2Njo7Onr8urt8u3b3dx2nHZOlE1eqly02rPt9u56v3hitWFot2Z0vXLz+Pnr7/DW2tvBxcXBw8XIx8zJyM2xtrRXilddqVtntWXE4sPo8+d2vnRnt2Xh5ebU2NnO0dLV19nL0M9poWlktGK43bf5+/iDw4FftF1mtmTy9fjg5+Rvqm5muGOKx4ju9+7V6tWCw4CFxIO327ZouWX6/f/j6uhouGaRypDS6NHL5Mqw2a94vnb5/P5vqm9ktWJvum1iqWDB1sT6/P/3+v3v8/ODsoRcrlppumZpuWdkt2JpuWZsq2zS4df5+//H2cxrpWxgrF5grl5jp2OkxKf1+Pr5+v7Y5NysyK+iwqSjw6WiwqWkw6fE18jw9fX8/f/9/f8AAAAAAAAAAAAAAAAAAAAAAACyI5hNAAAAAXRSTlMAQObYZgAAAc9JREFUeF5jkGLCBV8wrHR/w/KGxZAByEKCLxiZPIMznLm0T4dm/GFAASwSwWtFHgr/3HnxwY7VULEqewbP7QzMNpM/MXBI6Tz8d3r3ly+fZy748iWot3nTHQYJJgYGBSOmD9f1Co3ZHJeKMoiKiGyzWeXOwPCCueonF6MQ1zvOh+827rjovfVjrOHfjJiYeV8YgHruidkyaVaJaQczMBj8UTp1hmFGGwPDQaBM8Ift8/8IWW9nKGFIWCkoeCeBgeHn4hcMEsx/hLdxxd4wuGKo9TvA+474H4brTAwshfOmfGGpuL3MKvXBgRa5J6fvLxWaw1DOMIfhJ9DXDMwLf2cfM/Tglv19mM16gucZhnNMzxhYnIAuYGac+94/4Yrx5UBH4Rtrzn/gZX7GwPDr5UoGBiYJBoa9XEc4DzG0bjBl4f4TwxcGDIVYoCjLSvuD9gwM5w1vMjDcSrnIPf0MSAZkD0s4UOKg/Yt/3xkYLjDIpTCItzIwNDJIvGBgWhkNlDgowdTzC6T2zZxWEPUBrGclA9C0F+fvfGPYysDwwOBUY30jqxhQlvEwUByoiSE8pZiBhaGymeEPC2vodoaD4QxSh5m8mZiYDh+WQgAQnwkAfMWtty+xHGoAAAAASUVORK5CYII=) in the editor toolbar (top right).
+2.  The “Insert” button icon in the editor toolbar (top right).
 
 3.  By manually typing the chunk delimiters
 
@@ -144,15 +167,10 @@ Solution:
 
 ```{r}
 #| label: uptown-chunk
-#| warning: true
+
 scores <- c(3,5,2,8)
 mean(scores)
-```
 
-new activity for testing settings
-
-```{r}
-2+2
 ```
 
 Activity_6:
@@ -162,25 +180,246 @@ Activity_6:
 solution:
 
 ```{r}
-#| label: uptown-chunk
-#| echo: false
-### Use of knitr::include_graphics()
-knitr::include_graphics("https://github.com/dilernia/STA418-518/blob/main/uptownFunk2.png?raw=true")
+#| label: uptown-chunk2
 
+### Use of knitr::include_graphics()
+knitr::include_graphics("https://raw.githubusercontent.com/dilernia/STA418-518/refs/heads/main/uptownFunk2.png") 
 ```
 
 **Why use `knitr::include_graphics()`?**
 
 - **Consistency:**It handles pathing seamlessly across different output formats (like HTML, PDF, and Word).
+- **Quarto Integration:**It allows you to use chunk options like #\| out.width: "80%"`or`#\| fig.align: "center"\`to control how the image looks in your final document.
 
-- **Quarto Integration:**It allows you to use chunk options like #| out.width: "80%"`or`#| fig.align: "center"`to control how the image looks in your final document.
-=======
-Headings and subheadings can be included in a file to organize the document.
+Activity_7
+
+➡️ Modify uptown-chunk by setting the echo chunk option to be false by including **#\| echo: false** immediately below the line with **#\| label: uptown-chunk**.
+
+solution:
 
 ```{r}
-# 1st Level Heading
-## 2nd Level Heading
-### 3rd Level Header
+#| label: uptown-chunk3
+
+### Use of knitr::include_graphics()
+knitr::include_graphics("https://raw.githubusercontent.com/dilernia/STA418-518/refs/heads/main/uptownFunk2.png") 
+```
+
+note:during the output, the code will be hidden and only image will output set by #\| echo: false
+
+Activity 8.
+
+Specify and toggle the include and eval chunk options for the uptown-chunk code chunk and see what happens. Note that some of the code chunk options for controlling the dimensions of figures only apply for graphics produced in code chunks, but not externally included images.
+
+solution:
+
+```{r}
+#| label: uptown-chunk4
+
+#| eval: true
+#| include: false
+### Use of knitr::include_graphics()
+knitr::include_graphics("https://raw.githubusercontent.com/dilernia/STA418-518/refs/heads/main/uptownFunk2.png")
 
 ```
 
+```{r}
+#| label: uptown-chunk5
+
+#| eval: true
+#| include: true
+### Use of knitr::include_graphics()
+knitr::include_graphics("https://raw.githubusercontent.com/dilernia/STA418-518/refs/heads/main/uptownFunk2.png")
+
+```
+
+### Chunk Option Behaviour
+
+| `eval` | `include` | Does code execute? | Is code shown in report? | Are results/images shown? | Common Use Case |
+|----|----|:--:|:--:|:--:|----|
+| **`true`** | **`true`** | Yes | Depends on `echo` | Yes | Standard active chunk for plots/text/images. |
+| **`true`** | **`false`** | Yes | No | No | Quiet data setup, loading libraries/scripts. |
+| **`false`** | **`true`** | No | Depends on `echo` | No | Displaying example code without running it. |
+| **`false`** | **`false`** | No | No | No | Deactivating/omitting chunk from document. |
+
+### Customizing the YAML (at the top of the Quarto document) 
+
+-–\
+title: “Document title”\
+author: “Author name”\
+date: today\
+format:\
+html:\
+self-contained: true\
+embed-resources: true\
+execute:\
+eval: true \# Evaluate code\
+echo: true \# Show code\
+warning: false \# Suppress warnings\
+message: false \# Suppress messages\
+-–
+
+### Including plots
+
+first, nstall.packages(‘tidyverse’) to the Console if not installed.
+
+excercise: plotting a scatter plot on storms ⛈️ between 1975 and 2021 from the National Oceanic and Atmospheric Administration (NOAA) data.
+
+```{r}
+library(tidyverse)
+# Load storms data set
+data(storms)
+
+storms |> ggplot(aes(x = pressure, y = wind)) +
+  geom_point()
+
+```
+
+Activity 9.
+
+Toggle the out-height, out-width, and fig-align chunk options, exploring their effect on the output document.
+
+Solution:
+
+```{r}
+#| label: storm-plot
+#| message: false
+#| out.width: "100%"
+#| out.height: "300px"
+#| fig.align: "center"
+
+library(tidyverse)
+# Load storms data set
+data(storms)
+
+storms |> ggplot(aes(x = pressure, y = wind)) +
+  geom_point()
+```
+
+### Inline Code
+
+```{r}
+xbar<-2
+se<-1.3
+```
+
+The 95% confidence interval for the mean is (`r xbar - 1.96 * se`, `r xbar + 1.96 * se`)
+
+Activity 10.
+
+➡️ Include a chunk of R code and after that in-line R code at the bottom of the document to reproduce the sentence containing the confidence interval results above.
+
+solution:
+
+A.chunk R code
+
+```{r}
+xbar<-4
+se<-2.3
+confidence_interval<- c( (xbar - 1.96 * se), (xbar - 1.96 * se) )
+confidence_interval
+```
+
+B. In-line code
+
+The 95% confidence interval for the mean is (`r xbar - 1.96 * se`, `r xbar + 1.96 * se`)
+
+### Tables
+
+Continueing with the storms data set looking at the four largest sustained wind speeds recorded for different storms.
+
+```{r}
+#Largest sustained wind speeds recorded
+storms_summary<- storms |>
+  group_by(name, year) |>
+  summarize(max_wind_knots =max(wind)) |>
+  ungroup() |>
+  slice_max(max_wind_knots, n=4)
+
+library(knitr)
+storms_summary |>
+  kable()
+```
+
+#### ***kable() from the knitr package***
+
+The kable() function includes tables in Quarto documents for PDF, HTML, and Word outputs.
+
+### customizing table captions
+
+```{r}
+#| label: ‘tbl-a_table_name #label option must begin with "tbl" prefix
+
+#| tbl-cap: ‘A custom table caption’
+```
+
+#### ***flextable() from the flextable package***
+
+flextable() function from flextable package displays tables for all output formats in a more consistent manner, with a large number of methods for customization that work for all output formats as shown @tbl-storms
+
+```{r}
+#| label: tbl-storms
+#| tbl-cap: "Table made with kable()"
+library(flextable)
+
+storms_summary |>
+  flextable() |>
+  colformat_double(big.mark="", digits=0) |>
+  autofit()
+
+  
+```
+
+### get() from the gt package
+
+get() function from get package has a wide range of formatting options, including conditional formatting and group-wise summary statistics. It is most easily used with HTML as the output format for Quarto, but not as easily for PDF or Word output when further customizing the table.
+
+```{r}
+library(gt)
+
+storms_summary |>
+  gt()
+```
+
+### Table Themes
+
+customizing aspects about tables displayed in Quarto using flextable () function.
+
+```{r}
+# Displaying flextable with tron theme
+#| label: storms_summary
+storms_summary |>
+  flextable() |>
+  autofit() |>
+  theme_tron()
+
+```
+
+Activity 11:
+
+➡️ Display the storms_summary table applying a complete theme different than the one used above using the flextable() function by viewing the available themes here:
+
+solution:
+
+```{r}
+#| label: flextable-zebra-theme
+library(flextable)
+# Displaying flextable with a clean zebra theme
+storms_summary |>
+  flextable() |>
+  autofit() |>
+  theme_zebra()
+```
+
+Activity 12.
+
+➡️ Display the storms_summary table applying a complete theme different than the one used above using the gt() function and the [gtExtras](https://jthomasmock.github.io/gtExtras/reference/index.html) R package by viewing the available themes here: <https://jthomasmock.github.io/gtExtras/reference/index.html>
+
+```{r}
+library(gt)
+library(gtExtras)
+
+# Combine everything into a single, connected pipeline
+storms_summary |>
+  gt(id = "tbl-custom") |> 
+  gt_theme_dot_matrix()
+```

@@ -1,0 +1,3 @@
+"0","#| label: ‘tbl-a_table_name #label option must begin with ""tbl"" prefix"
+"0",""
+"0","#| tbl-cap: ‘A custom table caption’"

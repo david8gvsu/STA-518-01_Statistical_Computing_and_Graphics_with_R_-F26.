@@ -1,0 +1,4 @@
+"0","#| label: uptown-chunk3"
+"0",""
+"0","### Use of knitr::include_graphics()"
+"0","knitr::include_graphics(""https://raw.githubusercontent.com/dilernia/STA418-518/refs/heads/main/uptownFunk2.png"") "
