@@ -2,10 +2,10 @@
 title: "Data Visualization with ggplot2"
 author: "David Nganga"
 date: today
-format: html
-html: 
+format: 
+ html: 
   self-contained: true
-  embende-resources: true
+  embend-resources: true
   toc: true
 execute:
   eval: true # Evaluate code
@@ -13,8 +13,8 @@ execute:
   error: true # Allows code execution with errors ignored
   warning: false # Suppress warnings
   message: false # suppress messages
+editor_options:
   editor: visual
-editor_options: 
   chunk_output_type: inline
 ---
 
